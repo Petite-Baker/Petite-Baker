@@ -32,6 +32,23 @@
       line-height: 1.5;
     }
     header { text-align: center; padding: 24px 16px 8px; }
+    .menu-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--rust);
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: .85rem;
+      padding: 9px 20px;
+      border-radius: 999px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    }
+    .menu-btn:hover, .menu-btn:focus { background: #7d3714; }
+    header { position: relative; }
     header img {
       width: 100%;
       max-width: 240px;
@@ -70,8 +87,14 @@
     .nutrition span {
       background: var(--rust);
       color: var(--cream);
-      border-radius: 999px;
-      padding: 3px 12px;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.2;
       font-weight: 700;
       font-size: .8rem;
     }
@@ -124,6 +147,7 @@
 <body>
 
   <header>
+    <a class="menu-btn" href="menu.html">Menu</a>
     <img src="logo.png" alt="Petite Baker">
   </header>
 
@@ -133,8 +157,8 @@
       <article class="item">
         <h2>Peanut Butter Protein Cups</h2>
         <div class="nutrition">
-          <span>12 g Protein</span>
-          <span>190 kcal</span>
+          <span>12 g<br>Protein</span>
+          <span>190<br>kcal</span>
         </div>
         <h3>Ingredients</h3>
         <p>Almond flour, organic plant-based vanilla protein powder (less than 1 g sugar), organic maple syrup, peanut butter (no added sugar), dark chocolate Cacao Trace 55%.</p>
@@ -147,8 +171,8 @@
       <article class="item">
         <h2>Protein Bites</h2>
         <div class="nutrition">
-          <span>4.8 g Protein</span>
-          <span>118 kcal</span>
+          <span>4.8 g<br>Protein</span>
+          <span>118<br>kcal</span>
         </div>
         <h3>Ingredients</h3>
         <p>Fiber oats, organic plant-based vanilla protein powder (less than 1 g sugar), peanut butter (no added sugar), Belcolade dark chocolate chips Cacao Trace 50.5%, honey (Liberian made).</p>

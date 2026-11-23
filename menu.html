@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu – Petite Baker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #67764d;
+      --cream: #f2e7e3;
+      --brown: #3b2418;
+      --rust: #99451c;
+      --pink: #ecc1c6;
+    }
+    * { box-sizing: border-box; }
+    html {
+      background: var(--green) url('bg.png') repeat;
+      background-size: 600px auto;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--brown);
+      font-family: 'Lato', Arial, sans-serif;
+      line-height: 1.5;
+    }
+    header { position: relative; text-align: center; padding: 24px 16px 8px; }
+    header img { width: 100%; max-width: 180px; height: auto; display: block; margin: 0 auto; }
+    .back-btn {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--cream); color: var(--rust);
+      text-decoration: none; font-weight: 700; font-size: .85rem;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 9px 20px; border-radius: 999px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    }
+    main { max-width: 800px; margin: 0 auto; padding: 16px; }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--cream);
+      text-align: center;
+      font-size: 2.4rem;
+      margin: 8px 0 4px;
+    }
+    .tagline {
+      display: table;
+      margin: 0 auto 20px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      color: var(--cream);
+      background: var(--green);
+      padding: 4px 20px;
+      border-radius: 999px;
+      box-shadow: 0 0 14px 8px var(--green);
+      text-align: center;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+    .dish {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 16px 18px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
+    .dish h2 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--rust);
+      font-size: 1.6rem;
+      margin: 0 0 4px;
+    }
+    .dish p { margin: 0; font-size: .95rem; }
+    .dish .detail { margin-top: 6px; font-size: .88rem; }
+    .dish .note {
+      margin-top: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--rust);
+      background: var(--pink);
+      border-radius: 999px;
+      display: inline-block;
+      padding: 2px 12px;
+    }
+    .dish p + .note, .dish .note + .note { margin-left: 4px; }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      html { background-size: 420px auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="index.html">&larr; Home</a>
+    <img src="logo.png" alt="Petite Baker">
+  </header>
+
+  <main>
+    <h1>Menu</h1>
+    <div class="tagline">Made with love, from my home to yours</div>
+    <section class="grid">
+      <article class="dish">
+        <h2>Go Bananas</h2>
+        <p>Banana chocolate chip cake</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Chip Tease</h2>
+        <p>Chocolate chip cookies x 15</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Monkey Bread</h2>
+        <p>Glazed cinnamon pull-apart bread</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Roll With It</h2>
+        <p>Glazed cinnamon banana cake</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Brownie Points</h2>
+        <p>Triple chocolate fudge brownie</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Donut Mess With Me</h2>
+        <p>Glazed vanilla donut x 12</p>
+        
+      </article>
+      <article class="dish">
+        <h2>First Date</h2>
+        <p>Date cake with toffee syrup</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Simply The Zest</h2>
+        <p>Lemon cheesecake with lemon curd</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Apple Of My Eye</h2>
+        <p>Apple crumble tart</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Best Of Both Worlds</h2>
+        <p>Vanilla sponge and creme caramel combo</p>
+        <p class="note">Preorder 24 hours in advance</p>
+      </article>
+      <article class="dish">
+        <h2>Bake It Easy</h2>
+        <p>Basque cheesecake</p>
+        <p class="note">Preorder 24 hours in advance</p>
+      </article>
+      <article class="dish">
+        <h2>Crack Me Open</h2>
+        <p>Upside down mixed berry cheesecake</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Brookie Of The Year</h2>
+        <p>Chocolate chip cookie brownies</p>
+        
+      </article>
+    </section>
+
+    <div class="tagline">Made with big love, for your little ones</div>
+    <section class="grid">
+      <article class="dish">
+        <h2>Crunch Time</h2>
+        <p>Little natural bites</p>
+        <p class="detail">Choose one of our bite-sized biscuit flavors: Vanilla or Cocoa</p><p class="note">Per three dozens</p>
+      </article>
+      <article class="dish">
+        <h2>Snack Attack</h2>
+        <p>Guilt free bars to make you smile</p>
+        <p class="detail">Rice Krispies and marshmallows</p><p class="note">Per dozen</p>
+      </article>
+      <article class="dish">
+        <h2>Mini Muffs</h2>
+        <p>Sugar free because you are sweet enough</p>
+        <p class="detail">Choose one of our delicious muffin flavors: Blueberry and banana, Date and banana, or Dark chocolate and banana</p><p class="note">Per dozen</p>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
