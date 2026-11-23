@@ -10,12 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green: #797d5a;
-      --cream: #e6d9d4;
-      --brown: #3a1f1f;
-      --card: #f6efeb;
-      --alert-bg: #f3dcd2;
-      --alert-text: #7a2e1d;
+      --green: #67764d;
+      --cream: #f2e7e3;
+      --brown: #3b2418;
+      --card: #f2e7e3;
+      --alert-bg: #ecc1c6;
+      --rust: #99451c;
+      --alert-text: #99451c;
     }
     * { box-sizing: border-box; }
     html {
@@ -55,6 +56,7 @@
     .item h2 {
       font-family: 'Dancing Script', cursive;
       font-size: 2rem;
+      color: var(--rust);
       margin: 0 0 12px;
       text-align: center;
     }
@@ -65,8 +67,8 @@
       margin-bottom: 16px;
     }
     .nutrition span {
-      background: var(--green);
-      color: #fff;
+      background: var(--rust);
+      color: var(--cream);
       border-radius: 999px;
       padding: 4px 14px;
       font-weight: 700;
@@ -77,7 +79,7 @@
       font-size: .8rem;
       letter-spacing: .08em;
       text-transform: uppercase;
-      color: #6b5a55;
+      color: var(--rust);
     }
     .item p { margin: 0 0 16px; }
     .allergy {
@@ -100,7 +102,7 @@
       text-align: center;
       color: var(--cream);
       padding: 24px 16px 40px;
-      font-size: .9rem;
+      font-size: 1rem;
     }
     footer .tag { font-family: 'Dancing Script', cursive; font-size: 1.3rem; }
     @media (max-width: 640px) {
