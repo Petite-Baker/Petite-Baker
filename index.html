@@ -32,10 +32,27 @@
       line-height: 1.5;
     }
     header { text-align: center; padding: 24px 16px 8px; }
-    .menu-btn {
+    .top-actions {
       position: absolute;
       top: 16px;
       right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .insta-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--rust);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    }
+    .insta-btn:hover, .insta-btn:focus { background: #7d3714; }
+    .insta-btn img { width: 20px; height: 20px; display: block; }
+    .menu-btn {
       background: var(--rust);
       color: var(--cream);
       text-decoration: none;
@@ -147,7 +164,10 @@
 <body>
 
   <header>
-    <a class="menu-btn" href="menu.html">Menu</a>
+    <div class="top-actions">
+      <a class="insta-btn" href="https://www.instagram.com/petitebaker.lr/" target="_blank" rel="noopener" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+      <a class="menu-btn" href="menu.html">Menu</a>
+    </div>
     <img src="logo.png" alt="Petite Baker">
   </header>
 
