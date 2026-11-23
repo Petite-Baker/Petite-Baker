@@ -59,7 +59,7 @@
     }
     .order {
       display: table;
-      margin: -8px auto 20px;
+      margin: -8px auto 10px;
       text-align: center;
       font-weight: 700;
       font-size: 1.05rem;
@@ -69,8 +69,21 @@
       border-radius: 999px;
       box-shadow: 0 0 12px 8px var(--green);
     }
-    .order .ph { width: 1.3em; height: 1.3em; vertical-align: -.3em; margin-right: 6px; }
-    .order a { color: var(--cream); text-decoration: underline; white-space: nowrap; }
+    .order-btn {
+      display: table;
+      margin: -4px auto 24px;
+      background: var(--rust);
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 11px 38px;
+      border-radius: 999px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.3);
+    }
+    .order-btn:hover, .order-btn:focus { background: #7d3714; }
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
     .dish {
       background: var(--cream);
@@ -114,7 +127,7 @@
   <main>
     <h1>Menu</h1>
     <div class="tagline">Made with love, from my home to yours</div>
-    <p class="order">To Order, please contact <a href="https://wa.me/231775700007" target="_blank" rel="noopener"><img class="ph" src="whatsapp.png" alt="WhatsApp">+231 775 700 007</a></p>
+    <a class="order-btn" href="https://wa.me/231775700007" target="_blank" rel="noopener">Order Now</a>
     <section class="grid">
       <article class="dish">
         <h2>Go Bananas</h2>
