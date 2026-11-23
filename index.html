@@ -105,7 +105,15 @@
       padding: 24px 16px 40px;
       font-size: 1rem;
     }
-    footer .tag { font-family: 'Dancing Script', cursive; font-size: 1.3rem; }
+    footer .tag {
+      display: inline-block;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      background: var(--green);
+      padding: 6px 22px;
+      border-radius: 999px;
+      box-shadow: 0 0 14px 10px var(--green);
+    }
     @media (max-width: 640px) {
       .items { grid-template-columns: 1fr; }
       html { background-size: 420px auto; }
