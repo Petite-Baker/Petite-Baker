@@ -34,28 +34,29 @@
     header { text-align: center; padding: 24px 16px 8px; }
     header img {
       width: 100%;
-      max-width: 136px;
+      max-width: 240px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
-    main { max-width: 960px; margin: 0 auto; padding: 16px; }
+    main { max-width: 800px; margin: 0 auto; padding: 16px; }
     .items {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 20px;
     }
     .item {
       background: var(--card);
       border-radius: 18px;
-      padding: 24px;
+      padding: 18px;
+      font-size: .92rem;
       box-shadow: 0 6px 18px rgba(0,0,0,.18);
       display: flex;
       flex-direction: column;
     }
     .item h2 {
       font-family: 'Dancing Script', cursive;
-      font-size: 2rem;
+      font-size: 1.65rem;
       color: var(--rust);
       margin: 0 0 12px;
       text-align: center;
@@ -70,9 +71,9 @@
       background: var(--rust);
       color: var(--cream);
       border-radius: 999px;
-      padding: 4px 14px;
+      padding: 3px 12px;
       font-weight: 700;
-      font-size: .9rem;
+      font-size: .8rem;
     }
     .item h3 {
       margin: 0 0 4px;
@@ -88,7 +89,7 @@
       color: var(--alert-text);
       border-left: 5px solid var(--alert-text);
       border-radius: 8px;
-      padding: 10px 14px;
+      padding: 8px 12px;
       font-weight: 700;
     }
     .allergy small {
@@ -107,6 +108,8 @@
     footer .tag { font-family: 'Dancing Script', cursive; font-size: 1.3rem; }
     @media (max-width: 640px) {
       .items { grid-template-columns: 1fr; }
+      html { background-size: 420px auto; }
+      header img { max-width: 180px; }
     }
   </style>
 </head>
