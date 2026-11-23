@@ -57,6 +57,20 @@
       box-shadow: 0 0 14px 8px var(--green);
       text-align: center;
     }
+    .order {
+      display: table;
+      margin: -8px auto 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--cream);
+      background: var(--green);
+      padding: 4px 18px;
+      border-radius: 999px;
+      box-shadow: 0 0 12px 8px var(--green);
+    }
+    .order .ph { width: 1.3em; height: 1.3em; vertical-align: -.3em; margin-right: 6px; }
+    .order a { color: var(--cream); text-decoration: underline; white-space: nowrap; }
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
     .dish {
       background: var(--cream);
@@ -100,6 +114,7 @@
   <main>
     <h1>Menu</h1>
     <div class="tagline">Made with love, from my home to yours</div>
+    <p class="order">To Order, please contact <a href="tel:+231775700007"><img class="ph" src="whatsapp.png" alt="WhatsApp">+231 775 700 007</a></p>
     <section class="grid">
       <article class="dish">
         <h2>Go Bananas</h2>
