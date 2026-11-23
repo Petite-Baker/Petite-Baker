@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petite Baker</title>
+  <meta name="description" content="Petite Baker – made with love, from my home to yours. Ingredients and allergy information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #7a7d5b;
+      --cream: #e6d9d4;
+      --brown: #3a1f1f;
+      --card: #f6efeb;
+      --alert-bg: #f3dcd2;
+      --alert-text: #7a2e1d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--green);
+      color: var(--brown);
+      font-family: 'Lato', Arial, sans-serif;
+      line-height: 1.5;
+    }
+    header { text-align: center; padding: 24px 16px 8px; }
+    header img {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    main { max-width: 960px; margin: 0 auto; padding: 16px; }
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .item {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      display: flex;
+      flex-direction: column;
+    }
+    .item h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      margin: 0 0 12px;
+      text-align: center;
+    }
+    .nutrition {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .nutrition span {
+      background: var(--green);
+      color: #fff;
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: .8rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #6b5a55;
+    }
+    .item p { margin: 0 0 16px; }
+    .allergy {
+      margin-top: auto;
+      background: var(--alert-bg);
+      color: var(--alert-text);
+      border-left: 5px solid var(--alert-text);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 700;
+    }
+    .allergy small {
+      display: block;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .7rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--cream);
+      padding: 24px 16px 40px;
+      font-size: .9rem;
+    }
+    footer .tag { font-family: 'Dancing Script', cursive; font-size: 1.3rem; }
+    @media (max-width: 640px) {
+      .items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Petite Baker – made with love, from my home to yours">
+  </header>
+
+  <main>
+    <section class="items">
+
+      <article class="item">
+        <h2>Peanut Butter Protein Cups</h2>
+        <div class="nutrition">
+          <span>12 g Protein</span>
+          <span>190 kcal</span>
+        </div>
+        <h3>Ingredients</h3>
+        <p>Almond flour, organic plant-based vanilla protein powder (less than 1 g sugar), organic maple syrup, peanut butter (no added sugar), dark chocolate Cacao Trace 55%.</p>
+        <div class="allergy">
+          <small>Allergy notice</small>
+          Contains Peanuts and Almonds.
+        </div>
+      </article>
+
+      <article class="item">
+        <h2>Protein Bites</h2>
+        <div class="nutrition">
+          <span>4.8 g Protein</span>
+          <span>118 kcal</span>
+        </div>
+        <h3>Ingredients</h3>
+        <p>Fiber oats, organic plant-based vanilla protein powder (less than 1 g sugar), peanut butter (no added sugar), Belcolade dark chocolate chips Cacao Trace 50.5%, honey (Liberian made).</p>
+        <div class="allergy">
+          <small>Allergy notice</small>
+          Contains Peanuts.
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="tag">Made with love, from my home to yours</div>
+    <div>Please check the ingredients and allergy notice before ordering.</div>
+  </footer>
+
+</body>
+</html>
