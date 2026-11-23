@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green: #7a7d5b;
+      --green: #797d5a;
       --cream: #e6d9d4;
       --brown: #3a1f1f;
       --card: #f6efeb;
@@ -18,9 +18,14 @@
       --alert-text: #7a2e1d;
     }
     * { box-sizing: border-box; }
+    html {
+      background: var(--green) url('bg.png') repeat;
+      background-size: 600px auto;
+    }
     body {
       margin: 0;
-      background: var(--green);
+      min-height: 100vh;
+      background: transparent;
       color: var(--brown);
       font-family: 'Lato', Arial, sans-serif;
       line-height: 1.5;
@@ -106,7 +111,7 @@
 <body>
 
   <header>
-    <img src="logo.jpg" alt="Petite Baker – made with love, from my home to yours">
+    <img src="logo.png" alt="Petite Baker">
   </header>
 
   <main>
