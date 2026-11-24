@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Petite Baker</title>
-  <meta name="description" content="Petite Baker – made with love, from my home to yours. Ingredients and allergy information.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -13,10 +12,8 @@
       --green: #797d5a;
       --cream: #f2e7e3;
       --brown: #3b2418;
-      --card: #f2e7e3;
-      --alert-bg: #ecc1c6;
       --rust: #99451c;
-      --alert-text: #99451c;
+      --pink: #ecc1c6;
     }
     * { box-sizing: border-box; }
     html {
@@ -26,188 +23,210 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: transparent;
       color: var(--brown);
       font-family: 'Lato', Arial, sans-serif;
       line-height: 1.5;
     }
-    header { text-align: center; padding: 24px 16px 8px; }
-    .top-actions {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    header { position: relative; text-align: center; padding: 24px 16px 8px; }
+    header img { width: 100%; max-width: 180px; height: auto; display: block; margin: 0 auto; }
+    .back-btn {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--cream); color: var(--rust);
+      text-decoration: none; font-weight: 700; font-size: .85rem;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 9px 20px; border-radius: 999px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
     }
     .insta-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
+      position: absolute; top: 16px; right: 16px;
+      width: 38px; height: 38px; border-radius: 50%;
       background: var(--rust);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       box-shadow: 0 3px 10px rgba(0,0,0,.25);
     }
     .insta-btn:hover, .insta-btn:focus { background: #7d3714; }
     .insta-btn img { width: 20px; height: 20px; display: block; }
-    .menu-btn {
+    .logo-link { display: block; max-width: 180px; margin: 0 auto; }
+    main { max-width: 800px; margin: 0 auto; padding: 16px; }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--cream);
+      text-align: center;
+      font-size: 2.4rem;
+      margin: 8px 0 4px;
+    }
+    .tagline {
+      display: table;
+      margin: 0 auto 20px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      color: var(--cream);
+      background: var(--green);
+      padding: 4px 20px;
+      border-radius: 999px;
+      box-shadow: 0 0 14px 8px var(--green);
+      text-align: center;
+    }
+    .order {
+      display: table;
+      margin: -8px auto 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--cream);
+      background: var(--green);
+      padding: 4px 18px;
+      border-radius: 999px;
+      box-shadow: 0 0 12px 8px var(--green);
+    }
+    .order-btn {
+      display: table;
+      margin: -4px auto 24px;
       background: var(--rust);
       color: var(--cream);
       text-decoration: none;
       font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-size: .85rem;
-      padding: 9px 20px;
-      border-radius: 999px;
-      box-shadow: 0 3px 10px rgba(0,0,0,.25);
-    }
-    .menu-btn:hover, .menu-btn:focus { background: #7d3714; }
-    header { position: relative; }
-    header img {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    main { max-width: 800px; margin: 0 auto; padding: 16px; }
-    .items {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .item {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 18px;
-      font-size: .92rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      display: flex;
-      flex-direction: column;
-    }
-    .item h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.65rem;
-      color: var(--rust);
-      margin: 0 0 12px;
-      text-align: center;
-    }
-    .nutrition {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .nutrition span {
-      background: var(--rust);
-      color: var(--cream);
-      width: 78px;
-      height: 78px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 1.2;
-      font-weight: 700;
-      font-size: .8rem;
-    }
-    .item h3 {
-      margin: 0 0 4px;
-      font-size: .8rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--rust);
-    }
-    .item p { margin: 0 0 16px; }
-    .allergy {
-      margin-top: auto;
-      background: var(--alert-bg);
-      color: var(--alert-text);
-      border-left: 5px solid var(--alert-text);
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-weight: 700;
-    }
-    .allergy small {
-      display: block;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .7rem;
-    }
-    footer {
-      text-align: center;
-      color: var(--cream);
-      padding: 24px 16px 40px;
       font-size: 1rem;
-    }
-    footer .tag {
-      display: inline-block;
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.3rem;
-      background: var(--green);
-      padding: 6px 22px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 11px 38px;
       border-radius: 999px;
-      box-shadow: 0 0 14px 10px var(--green);
+      box-shadow: 0 3px 10px rgba(0,0,0,.3);
     }
+    .order-btn:hover, .order-btn:focus { background: #7d3714; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+    .dish {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 16px 18px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
+    .dish h2 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--rust);
+      font-size: 1.6rem;
+      margin: 0 0 4px;
+    }
+    .dish p { margin: 0; font-size: .95rem; }
+    .dish .detail { margin-top: 6px; font-size: .88rem; }
+    .dish .note {
+      margin-top: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--rust);
+      background: var(--pink);
+      border-radius: 999px;
+      display: inline-block;
+      padding: 2px 12px;
+    }
+    .dish p + .note, .dish .note + .note { margin-left: 4px; }
     @media (max-width: 640px) {
-      .items { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
       html { background-size: 420px auto; }
-      header img { max-width: 180px; }
+      header { padding-top: 68px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="top-actions">
-      <a class="insta-btn" href="https://www.instagram.com/petitebaker.lr/" target="_blank" rel="noopener" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
-      <a class="menu-btn" href="menu.html">Menu</a>
-    </div>
-    <img src="logo.png" alt="Petite Baker">
+    <a class="back-btn" href="ingredients.html">Healthy Snacks</a>
+    <a class="insta-btn" href="https://www.instagram.com/petitebaker.lr/" target="_blank" rel="noopener" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+    <a class="logo-link" href="./" aria-label="Petite Baker home"><img src="logo.png" alt="Petite Baker"></a>
   </header>
 
   <main>
-    <section class="items">
-
-      <article class="item">
-        <h2>Peanut Butter Protein Cups</h2>
-        <div class="nutrition">
-          <span>12 g<br>Protein</span>
-          <span>190<br>kcal</span>
-        </div>
-        <h3>Ingredients</h3>
-        <p>Almond flour, organic plant-based vanilla protein powder (less than 1 g sugar), organic maple syrup, peanut butter (no added sugar), dark chocolate Cacao Trace 55%.</p>
-        <div class="allergy">
-          <small>Allergy notice</small>
-          Contains Peanuts and Almonds.
-        </div>
+    <h1>Menu</h1>
+    <div class="tagline">Made with love, from my home to yours</div>
+    <a class="order-btn" href="https://wa.me/231775700007" target="_blank" rel="noopener">Order Now</a>
+    <section class="grid">
+      <article class="dish">
+        <h2>Go Bananas</h2>
+        <p>Banana chocolate chip cake</p>
+        
       </article>
-
-      <article class="item">
-        <h2>Protein Bites</h2>
-        <div class="nutrition">
-          <span>4.8 g<br>Protein</span>
-          <span>118<br>kcal</span>
-        </div>
-        <h3>Ingredients</h3>
-        <p>Fiber oats, organic plant-based vanilla protein powder (less than 1 g sugar), peanut butter (no added sugar), Belcolade dark chocolate chips Cacao Trace 50.5%, honey (Liberian made).</p>
-        <div class="allergy">
-          <small>Allergy notice</small>
-          Contains Peanuts.
-        </div>
+      <article class="dish">
+        <h2>Chip Tease</h2>
+        <p>Chocolate chip cookies x 15</p>
+        
       </article>
+      <article class="dish">
+        <h2>Monkey Bread</h2>
+        <p>Glazed cinnamon pull-apart bread</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Roll With It</h2>
+        <p>Glazed cinnamon banana cake</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Brownie Points</h2>
+        <p>Triple chocolate fudge brownie</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Donut Mess With Me</h2>
+        <p>Glazed vanilla donut x 12</p>
+        
+      </article>
+      <article class="dish">
+        <h2>First Date</h2>
+        <p>Date cake with toffee syrup</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Simply The Zest</h2>
+        <p>Lemon cheesecake with lemon curd</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Apple Of My Eye</h2>
+        <p>Apple crumble tart</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Best Of Both Worlds</h2>
+        <p>Vanilla sponge and creme caramel combo</p>
+        <p class="note">Preorder 24 hours in advance</p>
+      </article>
+      <article class="dish">
+        <h2>Bake It Easy</h2>
+        <p>Basque cheesecake</p>
+        <p class="note">Preorder 24 hours in advance</p>
+      </article>
+      <article class="dish">
+        <h2>Crack Me Open</h2>
+        <p>Upside down mixed berry cheesecake</p>
+        
+      </article>
+      <article class="dish">
+        <h2>Brookie Of The Year</h2>
+        <p>Chocolate chip cookie brownies</p>
+        
+      </article>
+    </section>
 
+    <div class="tagline">Made with big love, for your little ones</div>
+    <section class="grid">
+      <article class="dish">
+        <h2>Crunch Time</h2>
+        <p>Little natural bites</p>
+        <p class="detail">Choose one of our bite-sized biscuit flavors: Vanilla or Cocoa</p><p class="note">Per three dozens</p>
+      </article>
+      <article class="dish">
+        <h2>Snack Attack</h2>
+        <p>Guilt free bars to make you smile</p>
+        <p class="detail">Rice Krispies and marshmallows</p><p class="note">Per dozen</p>
+      </article>
+      <article class="dish">
+        <h2>Mini Muffs</h2>
+        <p>Sugar free because you are sweet enough</p>
+        <p class="detail">Choose one of our delicious muffin flavors: Blueberry and banana, Date and banana, or Dark chocolate and banana</p><p class="note">Per dozen</p>
+      </article>
     </section>
   </main>
-
-  <footer>
-    <div class="tag">Made with love, from my home to yours</div>
-  </footer>
 
 </body>
 </html>

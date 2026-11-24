@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Healthy Snacks – Petite Baker</title>
+  <meta name="description" content="Petite Baker – made with love, from my home to yours. Ingredients and allergy information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #797d5a;
+      --cream: #f2e7e3;
+      --brown: #3b2418;
+      --card: #f2e7e3;
+      --alert-bg: #ecc1c6;
+      --rust: #99451c;
+      --alert-text: #99451c;
+    }
+    * { box-sizing: border-box; }
+    html {
+      background: var(--green) url('bg.png') repeat;
+      background-size: 600px auto;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: transparent;
+      color: var(--brown);
+      font-family: 'Lato', Arial, sans-serif;
+      line-height: 1.5;
+    }
+    header { text-align: center; padding: 24px 16px 8px; }
+    .top-actions {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .insta-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--rust);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    }
+    .insta-btn:hover, .insta-btn:focus { background: #7d3714; }
+    .insta-btn img { width: 20px; height: 20px; display: block; }
+    .menu-btn {
+      background: var(--rust);
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: .85rem;
+      padding: 9px 20px;
+      border-radius: 999px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    }
+    .menu-btn:hover, .menu-btn:focus { background: #7d3714; }
+    header { position: relative; }
+    header img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .logo-link { display: block; max-width: 180px; margin: 0 auto; }
+    main { max-width: 800px; margin: 0 auto; padding: 16px; }
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .item {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 18px;
+      font-size: .92rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      display: flex;
+      flex-direction: column;
+    }
+    .item h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.65rem;
+      color: var(--rust);
+      margin: 0 0 12px;
+      text-align: center;
+    }
+    .nutrition {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .nutrition span {
+      background: var(--rust);
+      color: var(--cream);
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.2;
+      font-weight: 700;
+      font-size: .8rem;
+    }
+    .item h3 {
+      margin: 0 0 4px;
+      font-size: .8rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--rust);
+    }
+    .item p { margin: 0 0 16px; }
+    .allergy {
+      margin-top: auto;
+      background: var(--alert-bg);
+      color: var(--alert-text);
+      border-left: 5px solid var(--alert-text);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+    }
+    .allergy small {
+      display: block;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .7rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--cream);
+      padding: 24px 16px 40px;
+      font-size: 1rem;
+    }
+    footer .tag {
+      display: inline-block;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      background: var(--green);
+      padding: 6px 22px;
+      border-radius: 999px;
+      box-shadow: 0 0 14px 10px var(--green);
+    }
+    @media (max-width: 640px) {
+      .items { grid-template-columns: 1fr; }
+      html { background-size: 420px auto; }
+      header img { max-width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-actions">
+      <a class="insta-btn" href="https://www.instagram.com/petitebaker.lr/" target="_blank" rel="noopener" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+      <a class="menu-btn" href="index.html">Menu</a>
+    </div>
+    <a class="logo-link" href="./" aria-label="Petite Baker home"><img src="logo.png" alt="Petite Baker"></a>
+  </header>
+
+  <main>
+    <section class="items">
+
+      <article class="item">
+        <h2>Peanut Butter Protein Cups</h2>
+        <div class="nutrition">
+          <span>12 g<br>Protein</span>
+          <span>190<br>kcal</span>
+        </div>
+        <h3>Ingredients</h3>
+        <p>Almond flour, organic plant-based vanilla protein powder (less than 1 g sugar), organic maple syrup, peanut butter (no added sugar), dark chocolate Cacao Trace 55%.</p>
+        <div class="allergy">
+          <small>Allergy notice</small>
+          Contains Peanuts and Almonds.
+        </div>
+      </article>
+
+      <article class="item">
+        <h2>Protein Bites</h2>
+        <div class="nutrition">
+          <span>4.8 g<br>Protein</span>
+          <span>118<br>kcal</span>
+        </div>
+        <h3>Ingredients</h3>
+        <p>Fiber oats, organic plant-based vanilla protein powder (less than 1 g sugar), peanut butter (no added sugar), Belcolade dark chocolate chips Cacao Trace 50.5%, honey (Liberian made).</p>
+        <div class="allergy">
+          <small>Allergy notice</small>
+          Contains Peanuts.
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="tag">Made with love, from my home to yours</div>
+  </footer>
+
+</body>
+</html>
