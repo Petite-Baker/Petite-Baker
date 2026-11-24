@@ -92,6 +92,11 @@
       display: flex;
       flex-direction: column;
     }
+    .item-wide {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - 10px);
+    }
     .item h2 {
       font-family: 'Dancing Script', cursive;
       font-size: 1.65rem;
@@ -160,6 +165,7 @@
     }
     @media (max-width: 640px) {
       .items { grid-template-columns: 1fr; }
+      .item-wide { width: 100%; }
       html { background-size: 420px auto; }
       header img { max-width: 180px; }
     }
@@ -203,6 +209,21 @@
         <div class="allergy">
           <small>Allergy notice</small>
           Contains Peanuts.
+        </div>
+      </article>
+
+      <article class="item item-wide">
+        <h2>Granola (230g)</h2>
+        <div class="nutrition">
+          <span>30 g<br>Serving</span>
+          <span>3.1 g<br>Protein</span>
+          <span>134<br>kcal</span>
+        </div>
+        <h3>Ingredients</h3>
+        <p>Maple syrup, honey, coconut oil, coconut flakes, flax seed, pecans, almonds, oats, pumpkin seeds, raisins.</p>
+        <div class="allergy">
+          <small>Allergy notice</small>
+          Contains Tree Nuts (Pecans, Almonds) and Coconut.
         </div>
       </article>
 
