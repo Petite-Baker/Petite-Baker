@@ -139,7 +139,7 @@
   <main>
     <h1>Menu</h1>
     <div class="tagline">Made with love, from my home to yours</div>
-    <a class="order-btn" href="https://wa.me/231775700007" target="_blank" rel="noopener">Order Now</a>
+    <a class="order-btn" id="order-btn" href="https://wa.me/231775700007" target="_blank" rel="noopener">Order Now</a>
     <section class="grid">
       <article class="dish">
         <h2>Go Bananas</h2>
@@ -228,5 +228,23 @@
     </section>
   </main>
 
+<script>
+  // On phones, open the WhatsApp app directly; fall back to the wa.me link if the app doesn't open.
+  (function () {
+    var btn = document.getElementById('order-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) return;
+      e.preventDefault();
+      var fallback = setTimeout(function () {
+        window.location.href = 'https://wa.me/231775700007';
+      }, 1500);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) clearTimeout(fallback);
+      });
+      window.location.href = 'whatsapp://send?phone=231775700007';
+    });
+  })();
+</script>
 </body>
 </html>
